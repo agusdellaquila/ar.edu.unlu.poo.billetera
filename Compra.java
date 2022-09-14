@@ -14,4 +14,12 @@ public class Compra {
 		this.monto = monto;
 		this.fecha = fecha;
 	}
+	
+	//getters
+	public Boolean getStatus() {
+		return this.estaPago;
+	}
+	public Double getMonto() {
+		return this.monto;
+	}
 }

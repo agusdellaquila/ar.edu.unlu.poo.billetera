@@ -23,4 +23,16 @@ public class CuentaCredito {
 	public Double getSaldoDeudorCuentaCredito() {
 		return this.saldoDeudor;
 	}
+	
+	//methods
+	public Double calculateDeuda() {
+		Double deudaTotal = 0.0;
+		int i = 0;
+		for (Compra compra : compras) {
+			if (compra.getStatus()) {
+				deudaTotal += compra.getMonto();
+			}	
+		}
+		return deudaTotal;
+	}
 }
